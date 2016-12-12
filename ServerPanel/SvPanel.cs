@@ -15,6 +15,7 @@ namespace ServerPanel
         public LogSystem logger;
 
         public bool isActive { get; set; }
+        public List<Client> clientList = new List<Client>();
 
         private ServerController svController;
 
@@ -45,6 +46,14 @@ namespace ServerPanel
                 logger.log("Server thread has been terminated");
             }
 
+        }
+
+        public void DisplayConnectedClients()
+        {
+            if (this.lblClients.InvokeRequired)
+                lstLog.Invoke((MethodInvoker)delegate { this.lblClients.Text = clientList.Count.ToString() + " connected client(s)"; });          
+            else
+                lblClients.Text = clientList.Count.ToString() + " connected client(s)";
         }
 
     }

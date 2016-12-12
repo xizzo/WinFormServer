@@ -30,6 +30,7 @@
         {
             this.lstLog = new System.Windows.Forms.ListBox();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lblClients = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstLog
@@ -52,17 +53,27 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // lblClients
+            // 
+            this.lblClients.AutoSize = true;
+            this.lblClients.Location = new System.Drawing.Point(12, 294);
+            this.lblClients.Name = "lblClients";
+            this.lblClients.Size = new System.Drawing.Size(0, 13);
+            this.lblClients.TabIndex = 2;
+            // 
             // SvPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 319);
+            this.Controls.Add(this.lblClients);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lstLog);
             this.Name = "SvPanel";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,6 +81,7 @@
 
         private System.Windows.Forms.ListBox lstLog;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lblClients;
     }
 }
 

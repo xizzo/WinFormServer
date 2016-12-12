@@ -20,10 +20,6 @@ namespace ServerPanel
 
         public void log(string txt)
         {
-            if (lstLog.Items.Count > 200)
-            {
-                lstLog.Items.RemoveAt(0);
-            }
             String msg = string.Format("[{0:t}] {1}", DateTime.Now, txt);
             if (this.lstLog.InvokeRequired)
             {

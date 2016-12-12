@@ -37,17 +37,31 @@ namespace ServerPanel
 
                 svSocket.Start();
 
-                while (true)
+                while (svPanel.isActive)
                 {
+                    if (!svSocket.Pending())
+                    {
+                        Thread.Sleep(500);
+                        continue;
+                    }
                     clSocket = svSocket.AcceptTcpClient();
                     svPanel.logger.log("Connection incoming: " + clSocket.Client.RemoteEndPoint.ToString());
+
+                    Client newClient = new Client(1, clSocket);
+                    svPanel.clientList.Add(newClient);
+                    svPanel.DisplayConnectedClients();
                 }
+                
             }
-            catch (Exception ex)
+            catch
             {
-                svMainThread.Abort();
             }
 
+        }
+
+        public void CloseMainSvThread()
+        {
+            svSocket.Stop();
         }
         
         private void OnThreadExit()
