@@ -51,7 +51,7 @@ namespace ServerPanel
         public void DisplayConnectedClients()
         {
             if (this.lblClients.InvokeRequired)
-                lstLog.Invoke((MethodInvoker)delegate { this.lblClients.Text = clientList.Count.ToString() + " connected client(s)"; });          
+                lblClients.Invoke((MethodInvoker)delegate { this.lblClients.Text = clientList.Count.ToString() + " connected client(s)"; });          
             else
                 lblClients.Text = clientList.Count.ToString() + " connected client(s)";
         }
