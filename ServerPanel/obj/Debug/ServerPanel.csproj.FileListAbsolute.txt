@@ -6,3 +6,4 @@ c:\users\gebruiker\documents\visual studio 2013\Projects\ServerPanel\ServerPanel
 c:\users\gebruiker\documents\visual studio 2013\Projects\ServerPanel\ServerPanel\obj\Debug\ServerPanel.exe
 c:\users\gebruiker\documents\visual studio 2013\Projects\ServerPanel\ServerPanel\obj\Debug\ServerPanel.pdb
 c:\users\gebruiker\documents\visual studio 2013\Projects\ServerPanel\ServerPanel\obj\Debug\ServerPanel.SvPanel.resources
+C:\Users\Gebruiker\Documents\Visual Studio 2013\Projects\ServerPanel\ServerPanel\obj\Debug\ServerPanel.csprojResolveAssemblyReference.cache

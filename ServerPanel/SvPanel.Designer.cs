@@ -40,12 +40,12 @@
             this.lstLog.FormattingEnabled = true;
             this.lstLog.Location = new System.Drawing.Point(12, 12);
             this.lstLog.Name = "lstLog";
-            this.lstLog.Size = new System.Drawing.Size(629, 225);
+            this.lstLog.Size = new System.Drawing.Size(629, 134);
             this.lstLog.TabIndex = 0;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(12, 243);
+            this.btnStart.Location = new System.Drawing.Point(15, 152);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 1;
@@ -65,12 +65,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 319);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(651, 184);
             this.Controls.Add(this.lblClients);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lstLog);
             this.Name = "SvPanel";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SvPanel_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

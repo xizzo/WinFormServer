@@ -56,5 +56,10 @@ namespace ServerPanel
                 lblClients.Text = clientList.Count.ToString() + " connected client(s)";
         }
 
+        private void SvPanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            isActive = false;
+        }
+
     }
 }
